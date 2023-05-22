@@ -1,9 +1,10 @@
+
 import express from "express";
 import pool from "./db/index.js";
 import cors from "cors";
 
 const app = express();
-const port = process.env.port || 5000;
+const port = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
@@ -35,5 +36,3 @@ app.get("/:id", async (req, res) => {
 app.listen(port, () => {
   console.log(`Your app listening on http://localhost:${port}`);
 });
-
-
